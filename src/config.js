@@ -1,5 +1,5 @@
 module.exports = {
-  email: 'brittany.chiang@gmail.com',
+  email: 'Sauravboro551@gmail.com',
 
   socialMedia: [
     {
@@ -7,12 +7,8 @@ module.exports = {
       url: 'https://github.com/bchiang7',
     },
     {
-      name: 'Instagram',
+      name: 'Facebook',
       url: 'https://www.instagram.com/bchiang7',
-    },
-    {
-      name: 'Twitter',
-      url: 'https://twitter.com/bchiang7',
     },
     {
       name: 'Linkedin',
@@ -30,11 +26,11 @@ module.exports = {
       url: '/#about',
     },
     {
-      name: 'Experience',
+      name: 'Qualifications',
       url: '/#jobs',
     },
     {
-      name: 'Work',
+      name: 'Projects',
       url: '/#projects',
     },
     {

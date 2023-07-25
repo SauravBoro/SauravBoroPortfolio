@@ -174,10 +174,14 @@ const Jobs = () => {
         edges {
           node {
             frontmatter {
-              title
+              title1
+              title2
+              title3
               company
               location
-              range
+              range1
+              range2
+              range3
               url
             }
             html
@@ -244,7 +248,7 @@ const Jobs = () => {
 
   return (
     <StyledJobsSection id="jobs" ref={revealContainer}>
-      <h2 className="numbered-heading">Where I’ve Worked</h2>
+      <h2 className="numbered-heading">Qualifications</h2>
 
       <div className="inner">
         <StyledTabList role="tablist" aria-label="Job tabs" onKeyDown={e => onKeyDown(e)}>
@@ -273,7 +277,7 @@ const Jobs = () => {
           {jobsData &&
             jobsData.map(({ node }, i) => {
               const { frontmatter, html } = node;
-              const { title, url, company, range } = frontmatter;
+              const { title1, title2, title3, url, company, range1, range2, range3 } = frontmatter;
 
               return (
                 <CSSTransition key={i} in={activeTabId === i} timeout={250} classNames="fade">
@@ -285,18 +289,21 @@ const Jobs = () => {
                     aria-hidden={activeTabId !== i}
                     hidden={activeTabId !== i}>
                     <h3>
-                      <span>{title}</span>
-                      <span className="company">
-                        &nbsp;@&nbsp;
-                        <a href={url} className="inline-link">
-                          {company}
-                        </a>
-                      </span>
+                      <span>{title1}</span>
                     </h3>
 
-                    <p className="range">{range}</p>
-
+                    <p className="range">{range1}</p>
                     <div dangerouslySetInnerHTML={{ __html: html }} />
+                    <h3>
+                      <span>{title2}</span>
+                    </h3>
+
+                    <p className="range">{range2}</p>
+                    <h3>
+                      <span>{title3}</span>
+                    </h3>
+
+                    <p className="range">{range3}</p>
                   </StyledTabPanel>
                 </CSSTransition>
               );
