@@ -277,7 +277,7 @@ const Jobs = () => {
           {jobsData &&
             jobsData.map(({ node }, i) => {
               const { frontmatter, html } = node;
-              const { title1, title2, title3, url, company, range1, range2, range3 } = frontmatter;
+              const { title1, title2, title3, range1, range2, range3 } = frontmatter;
 
               return (
                 <CSSTransition key={i} in={activeTabId === i} timeout={250} classNames="fade">
